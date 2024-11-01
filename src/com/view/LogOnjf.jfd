@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:45:p, comp label1:::p::p, space :0:0:x}, seq t {space ::83:x, par l:::p {seq t {par t {comp label3:::p::p, comp label2:::p::p}, space :p:38:p, par l {comp usernameTxt::::104:x, comp passwordTxt::::104:x}, space :p:121:p}, seq t {comp button1:::p::p, space :::x, comp button2:::p::p, space :p:74:p}}}}"
+			"$verticalGroup": "par l {seq l {space :p:44:p, comp label1:::p::p, space :p:26:p, par b {comp label2::b:p::p, comp usernameTxt::b:p:24:p}, space :p:31:p, par b {comp label3::b:p::p, comp passwordTxt::b:p:24:p}, space ::41:x, par b {comp button2::b:p::p, comp button1::b:p::p}, space :p:19:p}}"
+		} ) {
+			name: "this"
+			"title": "管理员登录"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "图书管理系统"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/book.png" )
+				"font": new java.awt.Font( "宋体", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "用户"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/user.png" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "usernameTxt"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "密码"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/password.png" )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "登录"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "重置"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordTxt"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 85, 30 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

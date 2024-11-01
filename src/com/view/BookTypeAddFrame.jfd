@@ -1,0 +1,45 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:32:p, par l {comp label1:::p::p, comp label2:::p::p}, space s:::p, par l {comp scrollPane1:::p:263:p, comp bookTypeText:::::x}, space ::96:x}, seq l {space :p:114:p, comp button1:::p::p, space ::163:x, comp button2:::p::p, space :p:60:p}}"
+			"$verticalGroup": "par l {seq l {space :p:67:p, par b {comp label1::b:p::p, comp bookTypeText::b:p::p}, space :p:38:p, par l {comp label2:::p::p, comp scrollPane1:::p:90:p}, space ::116:x, par t {comp button2:::p::p, comp button1:::p::p}, space :p:20:p}}"
+		} ) {
+			name: "this"
+			"visible": true
+			"title": "添加图书类别"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "图书类别名称："
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "图书类别描述："
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "bookTypeText"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "bookTypeDecsText"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "重置"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "提交"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 495, 430 )
+		} )
+	}
+}
